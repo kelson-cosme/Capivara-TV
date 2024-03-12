@@ -10,7 +10,7 @@ function Rotas() {
     <BrowserRouter>
         <Routes>
             <Route path="/" element= {<Home/>} />
-            <Route path="/assistir" element= {<Assistir/>} />
+            <Route path="/assistir/:id" element= {<Assistir/>} />
             <Route path="/procurar" element= {<Procurar/>} />
         </Routes>
     </BrowserRouter>
