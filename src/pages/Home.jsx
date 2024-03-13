@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react"
 
 import { Link } from "react-router-dom";
- 
+
 const filmesURL = import.meta.env.VITE_API;
 const chaveAPI = import.meta.env.VITE_API_KEY;
 const imgURL = import.meta.env.VITE_IMG;

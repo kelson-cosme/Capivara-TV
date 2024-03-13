@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
+import "../pages/Assistir.css"
+
 const filmesURL = import.meta.env.VITE_API
 const chaveAPI = import.meta.env.VITE_API_KEY
 
-function Assistir() {
 
+function Assistir() {
+ 
   const id = useParams() //pegar o paremetro id da url
   const [filme, setFilme] = useState()
   
@@ -37,9 +40,26 @@ function Assistir() {
           }if (episode !== "") { 
             episode = "/"+episode; 
           }}
-            var frame = document.getElementById('SuperFlixAPIContainerVideo');
-            frame.innerHTML = '<iframe sandbox="allow-scripts allow-same-origin" src="https://superflixapi.top/'+type+'/'+imdb+season+episode+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+           
+          window.onload = function() {
+            var iframe = document.getElementById('meu-iframe');
+            if (iframe) {
+                var doc = iframe.contentDocument || iframe.contentWindow.document;
+                var links = doc.querySelectorAll('a');
+
+                for (var i = 0; i < links.length; i++) {
+                    links[i].addEventListener('click', function(event) {
+                        event.preventDefault(); // Impede que o link seja seguido
+                    });
+                }
+            }
+        };
+          var frame = document.getElementById('SuperFlixAPIContainerVideo');
+            frame.innerHTML = '<iframe sandbox="allow-same-origin allow-scripts" src="https://superflixapi.top/'+type+'/'+imdb+season+episode+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
         }
+
+        
+
     }, [filme != null]);
 
   return (
