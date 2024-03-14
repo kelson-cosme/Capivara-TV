@@ -1,3 +1,5 @@
+[Deixarei o site privado, pois foi feito apenas para estudo]
+
 # App web de serviço de filmes e canais ao vivo
 
 
