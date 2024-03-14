@@ -30,6 +30,12 @@ function Navbar() {
 
                 </form>
             </div>
+
+            <Link to={"/"}>Canais Ao Vivo</Link>
+            <Link to={"/"}>Filmes</Link>
+            <Link to={"/"}>Series</Link>
+
+
         </nav>
     )
   }

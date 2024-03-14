@@ -1,0 +1,21 @@
+.slideCinemas{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1980px;
+    margin: auto;
+
+}
+.card{
+    text-align: center;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.poster{
+    max-width: 95%;
+}
+.slideItem{
+    max-width: 100%;
+}

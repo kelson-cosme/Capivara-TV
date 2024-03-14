@@ -41,21 +41,8 @@ function Assistir() {
             episode = "/"+episode; 
           }}
            
-          window.onload = function() {
-            var iframe = document.getElementById('meu-iframe');
-            if (iframe) {
-                var doc = iframe.contentDocument || iframe.contentWindow.document;
-                var links = doc.querySelectorAll('a');
-
-                for (var i = 0; i < links.length; i++) {
-                    links[i].addEventListener('click', function(event) {
-                        event.preventDefault(); // Impede que o link seja seguido
-                    });
-                }
-            }
-        };
           var frame = document.getElementById('SuperFlixAPIContainerVideo');
-            frame.innerHTML = '<iframe sandbox="allow-same-origin allow-scripts" src="https://superflixapi.top/'+type+'/'+imdb+season+episode+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
+            frame.innerHTML = '<iframe allow-scripts" src="https://superflixapi.top/'+type+'/'+imdb+season+episode+'" scrolling="no" frameborder="0" allowfullscreen="" webkitallowfullscreen="" mozallowfullscreen=""></iframe>';
         }
 
         
