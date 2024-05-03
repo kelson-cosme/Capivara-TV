@@ -14,8 +14,17 @@ body{
 .slideCinemas2{
     display: flex;
     justify-content: space-between;
-    max-width: 65%;
+    max-width: 100%;
 }
+.recomendados{
+    background-color: #133251;
+    width: 100%;
+    color: #fff;
+}
+
+
+
+
 .card{
     text-align: center;
     margin: auto;
@@ -37,7 +46,6 @@ body{
     color: white;
     max-width: 1980px;
     margin: auto;
-    background-color: red;
 }
 
 .navegar{
@@ -89,5 +97,6 @@ body{
     width: 100%;
     cursor: pointer;
 } 
+
 
 
