@@ -50,7 +50,6 @@ function Home() {
 
     
     <section class="corpoHome">
-      <h1 className="titulo">Nos cinemas</h1>
 
       <div className="slideCinemas">
       <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
@@ -72,9 +71,10 @@ function Home() {
 
       </div>
 
-      <h1 className="titulo">Popular</h1>
+      <h1 className="titulo">Filmes</h1>
         
-      <div className="slideCinemas">
+      <div className="slideCinemas2">
+        
         <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
             {popular &&
               popular.map( (filmes) => (

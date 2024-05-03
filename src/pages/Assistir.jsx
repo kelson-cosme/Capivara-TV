@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
 import "../pages/Assistir.css"
- 
+
+const filmesURL = import.meta.env.VITE_API
 const chaveAPI = import.meta.env.VITE_API_KEY
 
 

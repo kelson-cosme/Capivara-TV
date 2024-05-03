@@ -1,9 +1,20 @@
+body{
+    
+    background-color: #091521;
+}
+.corpoHome{
+    max-width: 1980px;
+    margin: auto;
+}
 .slideCinemas{
     display: flex;
     justify-content: space-between;
-    max-width: 1980px;
-    margin: auto;
-
+    margin: 60px auto 0 auto;
+}
+.slideCinemas2{
+    display: flex;
+    justify-content: space-between;
+    max-width: 65%;
 }
 .card{
     text-align: center;
@@ -12,6 +23,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #ffff;
+    text-decoration: none;
 }
 .poster{
     max-width: 95%;
@@ -20,14 +33,13 @@
     max-width: 100%;
 }
 .titulo{
-    text-align: center;
-    font-size: 3vw;
+    font-size: 30px;
     color: white;
-    padding: 20px;
-    background-color: rgb(97, 97, 97);
+    max-width: 1980px;
+    margin: auto;
+    background-color: red;
 }
 
-/* nav Bar */
 .navegar{
     max-width: 1980px;
     margin: auto;
@@ -37,7 +49,45 @@
     display: flex;
     justify-content: space-between;
 }
+.imageLogo{
+    width: 100px;
+}
+.imageLogo img{
+    width: 100%;
+}
 .navegar a{
-    color: red;
     text-decoration: none;
 }
+.categoria{
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+.categoria a{
+    padding: 20px;
+    color: #ffff;
+}
+.pesquisa{
+    width: 80%;
+    margin: auto;
+}
+.pesquisa input{
+    width: calc(100% - 80px);
+    background-color: #133251;
+    border-radius: 25px;
+    border: none;
+    padding: 10px;
+    color: #ffff;
+}
+.enviar{
+    width: 30px;
+    background-color: rgba(255, 0, 0, 0);
+    border: none;
+}
+.enviar img{
+    width: 100%;
+    cursor: pointer;
+} 
+
+

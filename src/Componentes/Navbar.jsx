@@ -4,7 +4,8 @@ import {Link, useNavigate } from "react-router-dom";
 
 import "../pages/Home.css"
 
-import Logo from "../assets/logo.png"
+import Logo from "../Imagens/logo.png"
+import Lupa from "../Imagens/lupa.png"
 
 function Navbar() {
 
@@ -25,7 +26,7 @@ function Navbar() {
         <nav className="navegar">
 
             <div className="navegarCima">
-                <div><Link to={""}><img src={Logo}/></Link></div>
+                <div className="imageLogo"><Link to={""}><img src={Logo}/></Link></div>
 
                 <div className="categoria">
                     <Link to={"/"}>Canais Ao Vivo</Link>
@@ -39,8 +40,9 @@ function Navbar() {
             <div className="pesquisa">
                 <form onSubmit={envio}>
                     <input type="text" placeholder="Busque seu filme" onChange={ (e)=> setSearch(e.target.value)}  value={search}/> {/* pegar valor do input*/}
-                    <button type="submit" >
-                            <BiSearchAlt2/> 
+                    <button className="enviar" type="submit" >
+                        <img src={Lupa} alt="" />
+                            {/* <BiSearchAlt2/>  */}
                     </button>
 
                 </form>
