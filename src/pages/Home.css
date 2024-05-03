@@ -26,3 +26,18 @@
     padding: 20px;
     background-color: rgb(97, 97, 97);
 }
+
+/* nav Bar */
+.navegar{
+    max-width: 1980px;
+    margin: auto;
+
+}
+.navegarCima{
+    display: flex;
+    justify-content: space-between;
+}
+.navegar a{
+    color: red;
+    text-decoration: none;
+}
