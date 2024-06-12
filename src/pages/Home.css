@@ -100,3 +100,14 @@ body{
 
 
 
+@media screen and (max-width: 767px){
+    .categoria{
+        display: none;
+    }
+   .navegar{
+    display: flex;
+   }
+   .card h1{
+        font-size: 15px;
+   }
+}

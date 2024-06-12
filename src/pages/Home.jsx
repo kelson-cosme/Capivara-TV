@@ -12,8 +12,20 @@ const chaveAPI = import.meta.env.VITE_API_KEY;
 const imgURL = import.meta.env.VITE_IMG;
 
 
+// verificar tamanho da tela
+let tamanho = screen.width
+let totalSlides;
+if(tamanho <= 767){
+  totalSlides = 2
+}else if (tamanho <= 1023){
+  totalSlides = 3
+} else {
+  totalSlides = 4
+}
+
 function Home() {
 
+  
   
   const [recente, setRecente] = useState([]);
   const [popular, setPopular] = useState([])
@@ -52,7 +64,7 @@ function Home() {
     <section class="corpoHome">
 
       <div className="slideCinemas">
-        <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
+        <Swiper slidesPerView={totalSlides} pagination={{ clickable:true }} navigation>
             {recente &&
               recente.map( (filmes) => (
                 <SwiperSlide key={filmes.id}>
