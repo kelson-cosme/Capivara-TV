@@ -50,31 +50,31 @@ function Home() {
 
     
     <section class="corpoHome">
-      <h1 className="titulo">Nos cinemas</h1>
 
       <div className="slideCinemas">
-      <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
-          {recente &&
-            recente.map( (filmes) => (
-              <SwiperSlide key={filmes.id}>
+        <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
+            {recente &&
+              recente.map( (filmes) => (
+                <SwiperSlide key={filmes.id}>
 
-                <Link className="card" to={`/assistir/${filmes.id}`}> 
-                  <div className="poster">
-                    <img src={imgURL + filmes.poster_path} className="slideItem" alt="" />
-                  </div>
+                  <Link className="card" to={`/assistir/${filmes.id}`}> 
+                    <div className="poster">
+                      <img src={imgURL + filmes.poster_path} className="slideItem" alt="" />
+                    </div>
 
-                  <h1>{filmes.title}</h1>
-                </Link>
-              </SwiperSlide>
-            ))
-          }
-      </Swiper>
+                    <h1>{filmes.title}</h1>
+                  </Link>
+                </SwiperSlide>
+              ))
+            }
+        </Swiper>
 
       </div>
 
-      <h1 className="titulo">Popular</h1>
+      <h1 className="titulo">Filmes</h1>
         
-      <div className="slideCinemas">
+      <div className="slideCinemas2">
+        
         <Swiper slidesPerView={4} pagination={{ clickable:true }} navigation>
             {popular &&
               popular.map( (filmes) => (
@@ -91,6 +91,10 @@ function Home() {
               ))
             }
         </Swiper>
+
+        <div className="recomendados">
+          EM CONSTRUÇÃO
+        </div>
       </div>
       
     </section>
