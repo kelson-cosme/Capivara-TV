@@ -1,0 +1,32 @@
+h2{
+    text-align: center;
+    color: #fff;
+}
+.resultadoPesquisa{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.resultadoPesquisa a{
+    width: 16%;
+    margin: 10px;
+
+    color: #fff;
+    text-decoration: none;
+}
+.resultadoPesquisa h1{
+    font-size: 1rem;
+}
+.resultadoPesquisa img{
+    width: 100%;
+}
+@media screen and (max-width: 767px){
+    .resultadoPesquisa a{
+        width: 90%;
+    }
+    
+}@media screen and (min-width: 768px) and (max-width: 1023px) {
+    .resultadoPesquisa a{
+        width: 30%;
+    }   
+}

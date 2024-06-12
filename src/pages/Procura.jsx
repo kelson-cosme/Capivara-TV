@@ -3,6 +3,8 @@ import { useSearchParams } from "react-router-dom"
 
 import { Link } from "react-router-dom"
 
+import "../pages/Procurar.css"
+
 
 const procurarURL = import.meta.env.VITE_SEARCH
 const chaveAPI = import.meta.env.VITE_API_KEY
@@ -38,13 +40,16 @@ function Procurar() {
         
         <h2>Resultados para:{query} </h2>
 
-        {filmes && 
-          filmes.map ( (filme) => 
-          <Link to={`/assistir/${filme.id}`}>
-            <h1>{filme.title}</h1> 
-            <img src={imgURL+ filme.poster_path} alt="" />
-          </Link> )
-        }
+        <div className="resultadoPesquisa">
+          {filmes && 
+            filmes.map ( (filme) => 
+            <Link to={`/assistir/${filme.id}`}>
+              <h1>{filme.title}</h1> 
+              <img src={imgURL+ filme.poster_path} alt="" />
+            </Link> )
+          }
+        </div>
+        
   </div>   
   )
 }

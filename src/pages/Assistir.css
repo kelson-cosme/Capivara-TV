@@ -3,3 +3,13 @@ iframe {
     width: 95vw;
     height: 100vh;
 }
+h1{
+    color: #ffff;
+    text-align: center;
+}
+#SuperFlixAPIContainerVideo{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
