@@ -98,7 +98,13 @@ body{
     cursor: pointer;
 } 
 
-
+footer{
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0;
+    max-width: 1980px;
+    margin: auto;
+    height: 10rem;
+}
 
 @media screen and (max-width: 767px){
     .categoria{

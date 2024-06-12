@@ -4,6 +4,7 @@ import Home from "../pages/Home"
 import Assistir from  "../pages/Assistir"
 import Procurar from "../pages/Procura"
 import Navbar from "../Componentes/Navbar"
+import Footer from "../Componentes/Footer"
 
 function Rotas() {
 
@@ -16,7 +17,10 @@ function Rotas() {
             <Route path="/assistir/:id" element= {<Assistir/>} />
             <Route path="/procurar" element= {<Procurar/>} />
         </Routes>
+        <Footer/>
+
     </BrowserRouter>
+    
   )
 }
 
