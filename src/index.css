@@ -1,0 +1,75 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #091521;
+    color: #fff;
+    /* Garante que o footer fique no final */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #root {
+    flex: 1; /* Faz o conteúdo principal crescer */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Container principal para centralizar o conteúdo */
+  .main-container {
+    width: 100%;
+    max-width: 1980px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona algum espaço nas laterais */
+    flex: 1; /* Faz o conteúdo da página crescer */
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  a:hover {
+    color: #ffc107; /* Um amarelo para destacar */
+  }
+  
+  /* --- ESTILOS DO FOOTER --- */
+  .footer-container {
+    background-color: #060e17; /* Um pouco mais escuro que o body */
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 40px; /* Separa o footer do conteúdo */
+    width: 100%;
+  }
+  
+  .social-icons {
+    margin-bottom: 20px;
+  }
+  
+  .social-icons a {
+    font-size: 2rem;
+    margin: 0 15px;
+    color: #aaa;
+  }
+  
+  .social-icons a:hover {
+    color: #ffc107;
+  }
+  
+  .copyright-text {
+    margin-bottom: 10px;
+    color: #ccc;
+  }
+  
+  .disclaimer-text {
+    font-size: 0.8rem;
+    color: #888;
+    font-style: italic;
+  }

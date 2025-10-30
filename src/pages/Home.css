@@ -1,119 +1,291 @@
-body{
-    
-    background-color: #091521;
-}
-.corpoHome{
+/* --- ESTILOS DO NAVBAR (Já existentes) --- */
+/* Mantenha todos os seus estilos .navegar, .navegarCima, .pesquisa, etc. aqui */
+.navegar {
     max-width: 1980px;
     margin: auto;
-}
-.slideCinemas{
+    padding: 10px 20px; /* Adicionado padding para alinhamento */
+  }
+  .navegarCima {
     display: flex;
     justify-content: space-between;
-    margin: 60px auto 0 auto;
-}
-.slideCinemas2{
-    display: flex;
-    justify-content: space-between;
-    max-width: 100%;
-}
-.recomendados{
-    background-color: #133251;
-    width: 100%;
-    color: #fff;
-}
-
-
-
-
-.card{
-    text-align: center;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: #ffff;
-    text-decoration: none;
-}
-.poster{
-    max-width: 95%;
-}
-.slideItem{
-    max-width: 100%;
-}
-.titulo{
-    font-size: 30px;
-    color: white;
-    max-width: 1980px;
-    margin: auto;
-}
-
-.navegar{
-    max-width: 1980px;
-    margin: auto;
-
-}
-.navegarCima{
-    display: flex;
-    justify-content: space-between;
-}
-.imageLogo{
+    align-items: center; /* Centraliza verticalmente */
+  }
+  .imageLogo {
     width: 100px;
-}
-.imageLogo img{
+  }
+  .imageLogo img {
     width: 100%;
-}
-.navegar a{
-    text-decoration: none;
-}
-.categoria{
+  }
+  .categoria {
     display: flex;
     align-items: center;
-    width: 30%;
-    justify-content: space-between;
-}
-.categoria a{
-    padding: 20px;
-    color: #ffff;
-}
-.pesquisa{
-    width: 80%;
-    margin: auto;
-}
-.pesquisa input{
-    width: calc(100% - 80px);
-    background-color: #133251;
-    border-radius: 25px;
-    border: none;
+    gap: 30px; /* Espaçamento moderno */
+  }
+  .categoria a {
     padding: 10px;
     color: #ffff;
-}
-.enviar{
-    width: 30px;
-    background-color: rgba(255, 0, 0, 0);
+    font-weight: bold;
+  }
+  .pesquisa {
+    width: 80%;
+    margin: 20px auto 0 auto;
+    display: flex; /* Usar flex para alinhar o botão */
+  }
+  .pesquisa input {
+    flex: 1; /* Input cresce para preencher o espaço */
+    background-color: #133251;
+    border-radius: 25px 0 0 25px; /* Arredonda só a esquerda */
     border: none;
-}
-.enviar img{
-    width: 100%;
+    padding: 10px 20px; /* Aumenta padding */
+    color: #ffff;
+    font-size: 1rem;
+  }
+  .pesquisa input::placeholder {
+    color: #ccc;
+  }
+  .enviar {
+    width: 60px; /* Largura do botão */
+    background-color: #133251;
+    border: none;
+    border-radius: 0 25px 25px 0; /* Arredonda só a direita */
     cursor: pointer;
-} 
-
-footer{
-    background-color: rgba(0, 0, 0, 0);
-    padding: 0;
-    max-width: 1980px;
-    margin: auto;
-    height: 10rem;
-}
-
-@media screen and (max-width: 767px){
-    .categoria{
-        display: none;
-    }
-   .navegar{
+    padding-right: 10px;
+  }
+  .enviar img {
+    width: 25px; /* Tamanho da lupa */
+    opacity: 0.7;
+    transition: opacity 0.3s;
+  }
+  .enviar:hover img {
+    opacity: 1;
+  }
+  
+  /* --- ESTILO DO HERO BANNER --- */
+  .hero-banner {
+    height: 60vh;
+    min-height: 400px;
+    width: 100%; /* Ocupa a largura total */
+    position: relative;
     display: flex;
-   }
-   .card h1{
-        font-size: 15px;
-   }
-}
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden; /* Para o overlay funcionar */
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradiente para escurecer a imagem */
+    background: linear-gradient(
+      to right,
+      rgba(9, 21, 33, 0.9) 20%,
+      rgba(9, 21, 33, 0.3) 100%
+    );
+  }
+  
+  .hero-content {
+    position: relative; /* Para ficar acima do overlay */
+    z-index: 2;
+    padding: 40px;
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  .hero-button {
+    background-color: #ffc107;
+    color: #000;
+    padding: 15px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .hero-button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+    color: #000;
+  }
+  
+  /* --- ESTILOS DAS SEÇÕES DE FILMES --- */
+  .movies-section {
+    padding: 0 10px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: white;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #133251;
+  }
+  
+  .movies-slider {
+    margin-bottom: 30px;
+  }
+  
+  .card {
+    text-align: left;
+    display: block;
+    transition: transform 0.3s;
+    overflow: hidden; /* Para o poster */
+  }
+  
+  .card:hover {
+    transform: scale(1.03); /* Efeito de zoom */
+  }
+  
+  .card .slideItem {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 10px;
+    /* Limita o título a duas linhas */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  
+  /* --- Media Queries (Mantenha as suas) --- */
+  @media screen and (max-width: 767px) {
+    .categoria {
+      display: none;
+    }
+    .navegar {
+      flex-direction: column; /* Empilha logo e pesquisa */
+    }
+    .pesquisa {
+      width: 100%;
+    }
+    .hero-content {
+      max-width: 90%;
+    }
+    .hero-content h1 {
+      font-size: 2rem;
+    }
+    .hero-content p {
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .hero-button {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  }
+
+  .top10-section .section-title {
+    /* Título específico para o Top 10 */
+    border-bottom: 2px solid #ffc107; /* Borda amarela */
+  }
+  
+  /* Oculta a paginação do Swiper (pontos) para a seção Top 10 */
+  .top10-slider .swiper-pagination {
+    display: none;
+  }
+  
+  .top10-card {
+    display: flex;
+    align-items: center; /* Alinha o número e o pôster */
+    position: relative;
+    transition: transform 0.3s ease;
+  }
+  
+  .top10-card:hover {
+    transform: scale(1.05); /* Efeito de zoom no card todo */
+  }
+  
+  .top10-number {
+    font-size: 8rem; /* Tamanho gigante do número */
+    font-weight: bold;
+    font-family: "Impact", "Arial Narrow Bold", sans-serif;
+    
+    /* Efeito de contorno */
+    -webkit-text-stroke: 4px #444;
+    color: #091521; /* Cor de fundo para "vazar" o número */
+  
+    /* Posicionamento */
+    line-height: 1;
+    position: relative;
+    left: 25px; /* Empurra o pôster para a direita */
+    z-index: 1;
+  }
+  
+  .top10-poster-wrapper {
+    width: 130px; /* Largura fixa para o pôster */
+    height: 195px; /* Altura fixa */
+    margin-left: -20px; /* Puxa o pôster para cima do número */
+    position: relative;
+    z-index: 2; /* Pôster fica na frente do número */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .top10-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+  
+  /* --- Efeito de Play no Hover (Top 10) --- */
+  .top10-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: #ffc107;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .top10-card:hover .top10-play-overlay {
+    opacity: 1;
+  }
+  
+  /* Ajustes para telas menores */
+  @media screen and (max-width: 767px) {
+    .top10-number {
+      font-size: 6rem;
+      -webkit-text-stroke: 2px #444;
+      left: 15px;
+    }
+    .top10-poster-wrapper {
+      width: 100px;
+      height: 150px;
+      margin-left: -15px;
+    }
+  }
